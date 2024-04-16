@@ -57,6 +57,20 @@
   {{ end }}<!---->
   {{ end }}
 
+  <!-- vk -->
+
+  <script type="text/javascript" src="https://vk.com/js/api/openapi.js?168"></script>
+  <script type="text/javascript">
+    VK.init({ apiId: 51904530, onlyWidgets: true });
+  </script>
+
+  {{ if not (eq .Params.comments false) }}
+  <div class="mt-24" id="vk_comments"></div>
+  <script type="text/javascript">
+    VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*"});
+  </script>
+  {{ end }}
+
   <!-- Disqus -->
   {{ if and site.DisqusShortname (not (eq .Params.comments false)) }}
   <div class="mt-24" id="disqus_thread"></div>
