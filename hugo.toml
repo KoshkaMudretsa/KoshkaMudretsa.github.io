@@ -1,0 +1,4 @@
+baseURL = '/'
+languageCode = 'ru-ru'
+title = 'Егор Кощеев'
+theme = 'paper'
